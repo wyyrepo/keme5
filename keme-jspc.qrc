@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf_lib/iText-2.1.7.js2.jar</file>
+        <file>java/jasp_xml2pdf_lib/jasperreports-5.5.0.jar</file>
+    </qresource>    
+</RCC>
+

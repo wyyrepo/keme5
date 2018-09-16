@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf_lib/servlet-api-2.4.jar</file>
+        <file>java/jasp_xml2pdf_lib/xalan-2.7.1.jar</file>
+        <file>java/jasp_xml2pdf_lib/xml-apis.jar</file>
+    </qresource>
+    <qresource prefix="/informes_jasp">
+        <file>informes_jasp/bcomp.jasper</file>
+        <file>informes_jasp/bcomp.jrxml</file>
+        <file>informes_jasp/bcompro-comp.jasper</file>
+        <file>informes_jasp/bcompro-comp.jrxml</file>
+        <file>informes_jasp/bss-comp.jasper</file>
+        <file>informes_jasp/bss-comp.jrxml</file>
+        <file>informes_jasp/bss.jasper</file>
+        <file>informes_jasp/bss.jrxml</file>
+        <file>informes_jasp/diario.jasper</file>
+        <file>informes_jasp/diario.jrxml</file>
+        <file>informes_jasp/estado_contable_1ejercicio.jasper</file>
+        <file>informes_jasp/estado_contable_1ejercicio.jrxml</file>
+        <file>informes_jasp/estado_contable_desglose.jasper</file>
+        <file>informes_jasp/estado_contable_desglose.jrxml</file>
+        <file>informes_jasp/estado_contable_no_colref.jasper</file>
+        <file>informes_jasp/estado_contable_no_colref.jrxml</file>
+        <file>informes_jasp/estado_contable_porcent_1col.jasper</file>
+        <file>informes_jasp/estado_contable_porcent_1col.jrxml</file>
+        <file>informes_jasp/estado_contable_porcent_2col.jasper</file>
+        <file>informes_jasp/estado_contable_porcent_2col.jrxml</file>
+        <file>informes_jasp/estado_contable.jasper</file>
+        <file>informes_jasp/estado_contable.jrxml</file>
+        <file>informes_jasp/factura_keme_retencion.jasper</file>
+        <file>informes_jasp/factura_keme_retencion.jrxml</file>
+        <file>informes_jasp/factura_keme.jasper</file>
+        <file>informes_jasp/factura_keme.jrxml</file>
+        <file>informes_jasp/mayor.jasper</file>
+        <file>informes_jasp/mayor.jrxml</file>
+    </qresource>    
+</RCC>
+

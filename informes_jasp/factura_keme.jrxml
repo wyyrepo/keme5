@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2095186d-4a56-4409-88ae-87d3ed5e2c00">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="factura_keme"/>
+	<parameter name="fichlogo" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/Documento/Detalle/Linea]]>
+	</queryString>
+	<field name="Cantidad" class="java.lang.Double">
+		<fieldDescription><![CDATA[Cantidad]]></fieldDescription>
+	</field>
+	<field name="Precio" class="java.lang.Double">
+		<fieldDescription><![CDATA[Precio]]></fieldDescription>
+	</field>
+	<field name="Descuento" class="java.lang.Double">
+		<fieldDescription><![CDATA[Descuento]]></fieldDescription>
+	</field>
+	<field name="Codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[Codigo]]></fieldDescription>
+	</field>
+	<field name="Descrip" class="java.lang.String">
+		<fieldDescription><![CDATA[Descrip]]></fieldDescription>
+	</field>
+	<field name="Tipo_iva" class="java.lang.Double">
+		<fieldDescription><![CDATA[Tipo_iva]]></fieldDescription>
+	</field>
+	<field name="Tipo_re" class="java.lang.String">
+		<fieldDescription><![CDATA[Tipo_re]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/NombreEmpresa]]></fieldDescription>
+	</field>
+	<field name="Domicilio" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/Domicilio]]></fieldDescription>
+	</field>
+	<field name="Poblacion" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/Poblacion]]></fieldDescription>
+	</field>
+	<field name="CP" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/CP]]></fieldDescription>
+	</field>
+	<field name="Provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/Provincia]]></fieldDescription>
+	</field>
+	<field name="ID_REGISTRAL" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/ID_REGISTRAL]]></fieldDescription>
+	</field>
+	<field name="Serie" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_cabecera/Serie]]></fieldDescription>
+	</field>
+	<field name="Fecha_fac" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_cabecera/Fecha_fac]]></fieldDescription>
+	</field>
+	<field name="Numero" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_cabecera/Numero]]></fieldDescription>
+	</field>
+	<field name="Fecha_op" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_cabecera/Fecha_op]]></fieldDescription>
+	</field>
+	<field name="Tipo_doc" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_cabecera/Tipo_doc]]></fieldDescription>
+	</field>
+	<field name="Nombre_comercial" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Nombre_comercial]]></fieldDescription>
+	</field>
+	<field name="Razon" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Razon]]></fieldDescription>
+	</field>
+	<field name="Cif" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Cif]]></fieldDescription>
+	</field>
+	<field name="Domicilio_1" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Domicilio]]></fieldDescription>
+	</field>
+	<field name="Ciudad" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Ciudad]]></fieldDescription>
+	</field>
+	<field name="Codigo_postal" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Codigo_postal]]></fieldDescription>
+	</field>
+	<field name="Provincia_1" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Destinatario/Provincia]]></fieldDescription>
+	</field>
+	<field name="Tipo_ret" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_ret]]></fieldDescription>
+	</field>
+	<field name="Retencion" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Retencion]]></fieldDescription>
+	</field>
+	<field name="Notas" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Notas]]></fieldDescription>
+	</field>
+	<field name="Pie1" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Pie1]]></fieldDescription>
+	</field>
+	<field name="Pie2" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Pie2]]></fieldDescription>
+	</field>
+	<field name="Base1" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Base1]]></fieldDescription>
+	</field>
+	<field name="Tipo_iva1" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_iva1]]></fieldDescription>
+	</field>
+	<field name="Tipo_re1" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_re1]]></fieldDescription>
+	</field>
+	<field name="Cuota_iva1" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_iva1]]></fieldDescription>
+	</field>
+	<field name="Cuota_re1" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_re1]]></fieldDescription>
+	</field>
+	<field name="Base2" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Base2]]></fieldDescription>
+	</field>
+	<field name="Tipo_iva2" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_iva2]]></fieldDescription>
+	</field>
+	<field name="Tipo_re2" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_re2]]></fieldDescription>
+	</field>
+	<field name="Cuota_iva2" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_iva2]]></fieldDescription>
+	</field>
+	<field name="Cuota_re2" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_re2]]></fieldDescription>
+	</field>
+	<field name="Base3" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Base3]]></fieldDescription>
+	</field>
+	<field name="Tipo_iva3" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_iva3]]></fieldDescription>
+	</field>
+	<field name="Tipo_re3" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Tipo_re3]]></fieldDescription>
+	</field>
+	<field name="Cuota_iva3" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_iva3]]></fieldDescription>
+	</field>
+	<field name="Cuota_re3" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Cuota_re3]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Double">
+		<fieldDescription><![CDATA[/Documento/Datos_pie/Total]]></fieldDescription>
+	</field>
+	<field name="CIF" class="java.lang.String">
+		<fieldDescription><![CDATA[/Documento/Emisor/CIF]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="264" splitType="Stretch">
+			<staticText>
+				<reportElement x="246" y="22" width="139" height="30" uuid="d5648723-3df1-426b-9abf-6c462de8d62a"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACTURA]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="26" width="220" height="23" uuid="2585d178-558c-486a-b629-8ce0d6646988"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="49" width="236" height="19" uuid="c53536e3-86ad-4cb3-b1a9-98e4a7e8f1e0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Domicilio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="11" y="70" width="39" height="20" uuid="09dbd2e1-df7d-4cc3-b0a7-c121c76995aa"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{CP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="70" width="196" height="20" uuid="3b4d2933-d7d4-4746-bc9e-7e0414c25774"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Poblacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="90" width="236" height="19" uuid="1256f064-6ca6-4acd-9916-43a7acbe987b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Provincia}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="250" y="130" width="261" height="110" uuid="116421ca-22ec-4333-8fee-e7ec4186d16d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement x="4" y="2" width="257" height="18" uuid="9541c707-200f-4f9b-a385-01b7a0d0e62d"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Razon}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="4" y="21" width="254" height="20" uuid="833edb48-e133-4a26-953d-e3507271bb3a"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Domicilio_1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="5" y="41" width="46" height="19" uuid="d2a5ec36-8a49-4513-9bd7-cabd93a96ff1"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Codigo_postal}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="51" y="42" width="207" height="18" uuid="08597b8b-b0db-4932-ba4b-d0bb9331f198"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Ciudad}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="6" y="61" width="253" height="20" uuid="0af1d388-9985-4974-ae0a-9bb1ee6f698a"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Provincia_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="6" y="81" width="35" height="19" uuid="32f74217-9175-48de-91f6-a61c18d629a4"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[NIF:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="42" y="81" width="169" height="20" uuid="1a634337-0e67-4d5f-b016-03acaec7e1ca"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{Cif}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image>
+				<reportElement x="430" y="20" width="100" height="50" uuid="a942e519-46a2-4b27-ae55-d55829954d58">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{fichlogo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="160" width="60" height="20" uuid="00cb9efe-def7-408b-9023-2968623ebbd5"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACTURA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="160" width="70" height="20" uuid="690ea9f1-52a1-44f2-ab7c-c3092dc192f7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Serie}+$F{Numero}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="190" width="60" height="20" uuid="1653bbfa-73c0-43bc-ab6a-88951da88be6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="70" y="191" width="70" height="19" uuid="cfea7906-a92e-4d64-a6eb-db21bdde9d28"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fecha_fac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="11" width="80" height="20" uuid="76082f33-44b7-4917-999b-530e42f615da"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Referencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="11" width="216" height="20" uuid="38f510a4-b3cb-406e-85ec-7644ad2940c3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="11" width="49" height="20" uuid="71b8849a-5d67-4ecb-8a3f-62e2188c26b2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="11" width="64" height="20" uuid="0842e147-bb96-4ab1-ae0d-805fe5df2550">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="11" width="41" height="20" uuid="7c07ec2f-743f-430c-a809-b9ba0200a16e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[DTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="11" width="46" height="20" uuid="4bbc4e8c-2f14-4e85-94c3-678cbcc1cc9f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[% IVA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="0" width="80" height="26" uuid="6b6e212f-7c30-4df0-ace0-3b0977b8142c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1" spacingBefore="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Codigo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="110" y="0" width="216" height="26" uuid="16a0a9a5-b98d-4f86-bafa-a25bd67f9b24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Descrip}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="326" y="0" width="49" height="26" uuid="29dbf463-8103-41cd-95bc-075baa75e920">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cantidad}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="375" y="0" width="64" height="26" uuid="7c5803f5-db58-4e75-b3bf-50228bf78ca6"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Precio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###" isBlankWhenNull="true">
+				<reportElement x="439" y="0" width="41" height="26" uuid="69b65f12-3fe3-46cb-94e6-5614474ad6cf"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Descuento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="480" y="0" width="46" height="26" uuid="8c7487cc-f5f6-4f98-bd61-ac9e1a4630c9"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo_iva}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="22" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="10" width="555" height="1" uuid="64f52112-6e77-4035-bcdd-9d81a83ac190"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="217" splitType="Stretch">
+			<staticText>
+				<reportElement x="326" y="10" width="78" height="20" uuid="03355d3d-8481-4237-8420-7b78238435de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Base imponible]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="10" width="66" height="20" uuid="c32abb1c-efe5-4af0-a232-54df4c19dc23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cuota IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="10" width="38" height="20" uuid="b71942cb-b936-4515-b631-5325ea481027"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[%IVA]]></text>
+			</staticText>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="325" y="30" width="79" height="18" uuid="87ad477e-eecb-4a31-beae-77278a9aadec">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="0" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Base1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="325" y="52" width="79" height="18" uuid="32bf017a-e4a6-4c8c-9832-8acbc7a8db49"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Base2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="325" y="73" width="79" height="18" uuid="cdfc430a-9446-48dd-9bdb-db876a8f5764">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Base3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="414" y="30" width="39" height="18" uuid="a61a876a-3658-4f2f-b1f0-e34237e6b0e1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo_iva1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="414" y="52" width="39" height="18" uuid="d02cbb4a-86fd-47c0-b045-b5b1779e0d62"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo_iva2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="414" y="73" width="38" height="18" uuid="bed81536-fb47-452a-b4ad-2f447c6602c9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tipo_iva3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="459" y="30" width="67" height="18" uuid="90be63f2-3098-476a-a5e8-8f9bab0d57bb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cuota_iva1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="459" y="52" width="67" height="18" uuid="6d85d8cc-3fd8-4597-bd30-02c43200ab8b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cuota_iva2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="459" y="73" width="67" height="18" uuid="75869446-b2b1-44d2-aa69-0b6d4c3be856"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph leftIndent="2" rightIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cuota_iva3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="278" y="110" width="142" height="20" uuid="26b1fe96-bc29-4b0b-bb7d-7de76feeddb7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL FACTURA:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00#">
+				<reportElement x="420" y="111" width="110" height="19" uuid="9022b463-6fa1-4feb-b621-269215ee6423"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="180" width="555" height="16" uuid="6f088707-0a6e-4a52-b8d9-5102b5fee92c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}+" - NIF: "+$F{CIF}+" - "+($F{ID_REGISTRAL}==null ? "" : $F{ID_REGISTRAL})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="10" width="299" height="89" uuid="156b488b-3763-4eb7-853c-8e18aae357ca"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<paragraph leftIndent="2" rightIndent="2" spacingBefore="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Notas}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="140" width="551" height="19" uuid="fe3bdf4c-7aa0-4393-8a09-eafa104d12d3"/>
+				<textFieldExpression><![CDATA[$F{Pie1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="160" width="551" height="19" uuid="b858c2bf-dc3c-41ea-b1df-ac1ee0cedbcf"/>
+				<textFieldExpression><![CDATA[$F{Pie2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

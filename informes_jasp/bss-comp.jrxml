@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bss" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a7fa0fa-ed73-4dcd-ba4c-59938693a53b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fichlogo" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/BalanceSumasYSaldos/Detalle/Linea]]>
+	</queryString>
+	<field name="Cuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[Cuenta]]></fieldDescription>
+	</field>
+	<field name="Descrip" class="java.lang.String">
+		<fieldDescription><![CDATA[Descrip]]></fieldDescription>
+	</field>
+	<field name="Auxiliar" class="java.lang.String">
+		<fieldDescription><![CDATA[Auxiliar]]></fieldDescription>
+	</field>
+	<field name="SumaDebe" class="java.lang.Double">
+		<fieldDescription><![CDATA[SumaDebe]]></fieldDescription>
+	</field>
+	<field name="SumaHaber" class="java.lang.Double">
+		<fieldDescription><![CDATA[SumaHaber]]></fieldDescription>
+	</field>
+	<field name="SaldoDebe" class="java.lang.Double">
+		<fieldDescription><![CDATA[SaldoDebe]]></fieldDescription>
+	</field>
+	<field name="SaldoHaber" class="java.lang.Double">
+		<fieldDescription><![CDATA[SaldoHaber]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[/BalanceSumasYSaldos/Cabecera/NombreEmpresa]]></fieldDescription>
+	</field>
+	<field name="Inicio" class="java.util.Date">
+		<fieldDescription><![CDATA[/BalanceSumasYSaldos/Cabecera/Inicio]]></fieldDescription>
+	</field>
+	<field name="Fin" class="java.util.Date">
+		<fieldDescription><![CDATA[/BalanceSumasYSaldos/Cabecera/Fin]]></fieldDescription>
+	</field>
+	<field name="SumaDebe2" class="java.lang.Double">
+		<fieldDescription><![CDATA[SumaDebe2]]></fieldDescription>
+	</field>
+	<field name="SumaHaber2" class="java.lang.Double">
+		<fieldDescription><![CDATA[SumaHaber2]]></fieldDescription>
+	</field>
+	<field name="SaldoDebe2" class="java.lang.Double">
+		<fieldDescription><![CDATA[SaldoDebe2]]></fieldDescription>
+	</field>
+	<field name="SaldoHaber2" class="java.lang.Double">
+		<fieldDescription><![CDATA[SaldoHaber2]]></fieldDescription>
+	</field>
+	<field name="Inicio2" class="java.util.Date">
+		<fieldDescription><![CDATA[/BalanceSumasYSaldos/Cabecera/Inicio2]]></fieldDescription>
+	</field>
+	<field name="Fin2" class="java.util.Date">
+		<fieldDescription><![CDATA[/BalanceSumasYSaldos/Cabecera/Fin2]]></fieldDescription>
+	</field>
+	<variable name="SumaDebe_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SumaDebe} : null]]></variableExpression>
+	</variable>
+	<variable name="SumaHaber_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SumaHaber} : null]]></variableExpression>
+	</variable>
+	<variable name="SaldoDebe_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SaldoDebe} : null]]></variableExpression>
+	</variable>
+	<variable name="SaldoHaber_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SaldoHaber} : null]]></variableExpression>
+	</variable>
+	<variable name="SumaDebe2_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SumaDebe2} : null]]></variableExpression>
+	</variable>
+	<variable name="SumaHaber2_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Auxiliar}.equals("true") ? $F{SumaHaber2} : null]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="7" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c3125a5f-aedd-4fb0-a6e3-6b5f1d962842" x="238" y="0" width="359" height="33"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Balance de sumas y saldos]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="39ccf1ed-293f-4699-88ac-767e8032ee4a" x="185" y="50" width="474" height="28"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c0e12682-489f-484c-9aed-ab36469dd5ff" x="0" y="98" width="100" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Fecha Inicial:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b28fa81c-0e2c-4adb-862f-1895f40d8d48" x="200" y="98" width="89" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Fecha final:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="4787e1f7-027c-4a00-9a39-0a37b62dc005" x="100" y="98" width="100" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Inicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6aa78bfa-ffd5-4b28-9e59-19d9af0c0e3e" x="289" y="98" width="100" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fin}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="ef585312-3254-481d-a5e6-9b867bef0e40" x="0" y="0" width="100" height="50"/>
+				<imageExpression><![CDATA[$P{fichlogo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="c0e12682-489f-484c-9aed-ab36469dd5ff" x="389" y="98" width="114" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Fecha Inicial2:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="4787e1f7-027c-4a00-9a39-0a37b62dc005" x="503" y="98" width="94" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Inicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b28fa81c-0e2c-4adb-862f-1895f40d8d48" x="600" y="98" width="102" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Fecha final2:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="6aa78bfa-ffd5-4b28-9e59-19d9af0c0e3e" x="702" y="98" width="100" height="20"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b63d7784-e776-4843-8003-4d8cbae53e82" x="0" y="12" width="69" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d8dfee40-fcdd-4c3b-a035-0ed5065f6c9d" x="69" y="12" width="169" height="20"/>
+				<textElement/>
+				<text><![CDATA[Descrip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd63fa82-1ccd-46f4-b95a-1658e246e0fc" x="238" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[SumaDebe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="54f717b6-3698-4807-a721-361b711016ca" x="318" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[SumaHaber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2eea7fbb-503a-438e-9a21-644ae62aa05d" x="400" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="60e0ec9d-3a17-4e09-921d-fc11dbb6f68e" x="0" y="32" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="54a6cb3e-5e30-471e-8153-dc540b68bd0c" x="480" y="12" width="79" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[SumaDebe2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="83e909b9-0007-4a58-93a3-6a3f50d0adcd" x="559" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[SumaHaber2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3d3f5b03-a6a1-41ea-94a8-cb341b6c9a6a" x="639" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[SaldoDebe2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="28ad5fce-939d-4bd6-b549-1c9079bc13e6" x="719" y="12" width="83" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Dif. Saldos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="dd0e412c-d562-4bf5-a55a-c8e7ee0f7c52" x="0" y="0" width="69" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cuenta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f66f444e-a207-4cbe-aaa6-5cc93efc8b16" x="69" y="0" width="169" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Descrip}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="91aac55d-c802-419e-a231-d7a8e5d40852" x="238" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaDebe}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="3f596105-6de7-41fb-8e73-331a6dd2dba9" x="318" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaHaber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="ddf69a83-6bc4-4ead-9225-9b6e1cf3a578" x="400" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaDebe}-$F{SumaHaber}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="8d84d046-ccc8-4d98-9075-2d43d8ce76a0" x="0" y="20" width="802" height="1"/>
+			</line>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement uuid="1781da01-627c-4383-9d98-582ebb535d88" x="480" y="0" width="79" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaDebe2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement uuid="9b9bbea1-8011-4ad7-ba7b-8639dac63c6a" x="559" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaHaber2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="8f473066-2199-4e63-acf1-fa1342d660da" x="639" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaDebe2}-$F{SumaHaber2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement uuid="d84a7e24-239f-4070-a7ea-73e96162f579" x="719" y="1" width="83" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SumaDebe}-$F{SumaHaber}+$F{SumaDebe2}-$F{SumaHaber2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="fcd12871-7a7d-40cf-9ac4-2320aeed109d" x="238" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaDebe_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="18e46130-b65b-41e4-95ea-db32dbd527fe" x="318" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaHaber_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0a3fb259-1a93-4716-90e2-d6c24e03e439" x="138" y="12" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sumas y siguen ...]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="53acd8b4-de54-40ec-9e78-6bb9fef13bed" x="480" y="12" width="79" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaDebe2_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="d47dc566-0e9b-467c-9198-24cde0184384" x="559" y="12" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaHaber2_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="50">
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="fcd12871-7a7d-40cf-9ac4-2320aeed109d" x="238" y="10" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaDebe_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="18e46130-b65b-41e4-95ea-db32dbd527fe" x="320" y="10" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaHaber_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="090fabd2-3fe9-4509-a325-f0182207a8d8" x="185" y="10" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[Sumas ...]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="c2018dfe-8a99-4b24-8d19-cb496be45fb0" x="480" y="10" width="79" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaDebe2_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="683632d7-64d1-41a4-9a52-b80387d053f9" x="559" y="10" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SumaHaber2_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

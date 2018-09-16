@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf_lib/png-encoder-1.5.jar</file>
+        <file>java/jasp_xml2pdf_lib/poi-3.7-20101029.jar</file>
+        <file>java/jasp_xml2pdf_lib/rhino-1.7R3.jar</file>
+        <file>java/jasp_xml2pdf_lib/serializer.jar</file>
+    </qresource>    
+</RCC>
+

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf_lib/groovy-all-2.0.1.jar</file>
+    </qresource>    
+</RCC>
+

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mayor" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="0b626b20-f1d8-47e7-b1dd-a8e1c2369696">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="25"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mayor"/>
+	<style name="Title" fontName="SansSerif" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="SansSerif" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="SansSerif" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="SansSerif" fontSize="12"/>
+	<parameter name="fichlogo" class="java.lang.String"/>
+	<queryString language="xPath">
+		<![CDATA[/Mayor/Cuenta/DetalleCuenta/Apunte]]>
+	</queryString>
+	<field name="Concepto" class="java.lang.String">
+		<fieldDescription><![CDATA[Concepto]]></fieldDescription>
+	</field>
+	<field name="Saldo" class="java.lang.Double">
+		<fieldDescription><![CDATA[Saldo]]></fieldDescription>
+	</field>
+	<field name="FechaAsiento" class="java.util.Date">
+		<fieldDescription><![CDATA[FechaAsiento]]></fieldDescription>
+	</field>
+	<field name="Debe" class="java.lang.Double">
+		<fieldDescription><![CDATA[Debe]]></fieldDescription>
+	</field>
+	<field name="Haber" class="java.lang.Double">
+		<fieldDescription><![CDATA[Haber]]></fieldDescription>
+	</field>
+	<field name="Asiento" class="java.lang.Long">
+		<fieldDescription><![CDATA[Asiento]]></fieldDescription>
+	</field>
+	<field name="CuentaAuxiliar" class="java.lang.String">
+		<fieldDescription><![CDATA[/Mayor/Cuenta/CabeceraCuenta/CuentaAuxiliar]]></fieldDescription>
+	</field>
+	<field name="DescripCuenta" class="java.lang.String">
+		<fieldDescription><![CDATA[/Mayor/Cuenta/CabeceraCuenta/DescripCuenta]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[/Mayor/NombreEmpresa]]></fieldDescription>
+	</field>
+	<field name="Documento" class="java.lang.String">
+		<fieldDescription><![CDATA[Documento]]></fieldDescription>
+	</field>
+	<variable name="Debe_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Debe}]]></variableExpression>
+	</variable>
+	<variable name="Haber_1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{Haber}]]></variableExpression>
+	</variable>
+	<variable name="Debe_2" class="java.lang.Double" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{Debe}]]></variableExpression>
+	</variable>
+	<variable name="variable1" class="java.lang.String"/>
+	<title>
+		<band height="35" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="156" y="0" width="399" height="39" uuid="af4f9cc1-e20b-43df-a274-82f640d21063"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="24" isBold="true" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[MAYOR]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="13" y="58" width="531" height="35" uuid="eac990ab-a5fd-4e95-947c-3199e4ea3640"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="101" width="100" height="20" uuid="0e7b8370-2d93-479d-949d-8426c8d6caa1"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CuentaAuxiliar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="101" width="303" height="20" uuid="917b155b-d069-4b33-9037-a3342610f0e5"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DescripCuenta}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="13" y="0" width="100" height="50" uuid="091c988f-b54e-44ca-926f-9326d253343d"/>
+				<imageExpression><![CDATA[$P{fichlogo}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="14" width="47" height="14" uuid="58434d10-19bf-4945-a39d-ad500c69fea8"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ASIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="14" width="58" height="14" uuid="eae224cc-ba98-4b88-9ad4-bcc611d1ff0a"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="14" width="185" height="14" uuid="89772d46-7d66-416e-bea3-8f1d74a130a3"/>
+				<text><![CDATA[CONCEPTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="14" width="63" height="14" uuid="070c3a6d-b7f2-4a52-b383-df2af2355ce6"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[DEBE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="14" width="62" height="14" uuid="1c8ef812-3c5d-4a14-8301-cc1dbe9dcb7f"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[HABER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="14" width="68" height="14" uuid="fb698f6e-8d10-4098-a288-8e8c4c107a90"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[SALDO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="28" width="554" height="1" uuid="359e469e-2189-46e3-96bc-4b06163ee16b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="299" y="14" width="63" height="14" uuid="070c3a6d-b7f2-4a52-b383-df2af2355ce6"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField pattern="#,##0.00">
+				<reportElement stretchType="RelativeToBandHeight" x="487" y="2" width="68" height="18" uuid="904f01a1-e2b7-414a-96bd-352440df004c"/>
+				<box topPadding="0" bottomPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph rightIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Saldo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="2" width="35" height="18" uuid="2090374e-b724-4e17-93b1-44c22aaf464c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph lineSpacingSize="0.0" leftIndent="0" rightIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Asiento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="36" y="2" width="75" height="18" uuid="40e9a91d-16a8-4549-b35e-500c4a13cebd"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FechaAsiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="2" width="188" height="18" uuid="483fd363-292c-4a67-a2e2-1ea39ebfedcb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Concepto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="362" y="2" width="63" height="18" uuid="9cce7c57-d46d-4cf7-bb8b-7047503ffcdf"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph rightIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Debe}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="425" y="2" width="62" height="18" uuid="c2f8e5d8-cb82-4602-a80b-ad07bda6775a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph rightIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Haber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="299" y="2" width="63" height="18" uuid="e0d6ae22-dec7-4b97-ab9b-e4848d392dd0"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Documento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="36" splitType="Stretch">
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="362" y="4" width="63" height="20" uuid="fded05c0-aa33-459f-9e39-81778234d28e">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Debe_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="425" y="4" width="62" height="20" uuid="acb9fdf0-a8bf-4e82-b870-8dd840e5e07d">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Haber_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="247" y="4" width="115" height="20" uuid="849680ad-69b9-4ace-beed-74d51579a1da">
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sumas y siguen ...]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="88">
+			<staticText>
+				<reportElement x="247" y="31" width="115" height="20" uuid="9aaf4230-e0ee-47d2-86c4-c6223b941856"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sumas ...]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="362" y="31" width="63" height="20" uuid="c13ff02a-c081-4b3c-af15-e5715fa5f9a4"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Debe_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="425" y="31" width="62" height="20" uuid="e23152e1-22e1-45c6-8107-4ecdce6e61d9"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Haber_1}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="20" width="554" height="1" uuid="332ab264-cd89-46b0-9ccf-e610d435e643">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

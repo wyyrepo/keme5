@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf_lib/jcommon-1.0.15.jar</file>
+        <file>java/jasp_xml2pdf_lib/jdt-compiler-3.1.1.jar</file>
+        <file>java/jasp_xml2pdf_lib/jfreechart-1.0.12.jar</file>
+        <file>java/jasp_xml2pdf_lib/log4j-1.2.15.jar</file>
+        <file>java/jasp_xml2pdf_lib/mondrian-3.1.1.12687.jar</file>
+    </qresource>    
+</RCC>
+

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/java">
+        <file>java/jasp_xml2pdf.jar</file>
+        <file>java/jasp_xml2pdf_lib/barbecue-1.5-beta1.jar</file>
+        <file>java/jasp_xml2pdf_lib/barcode4j-2.1.jar</file>
+        <file>java/jasp_xml2pdf_lib/commons-beanutils-1.8.0.jar</file>
+        <file>java/jasp_xml2pdf_lib/commons-collections-2.1.1.jar</file>
+        <file>java/jasp_xml2pdf_lib/commons-digester-2.1.jar</file>
+        <file>java/jasp_xml2pdf_lib/commons-javaflow-20060411.jar</file>
+        <file>java/jasp_xml2pdf_lib/commons-logging-1.1.1.jar</file>
+    </qresource>    
+</RCC>
+

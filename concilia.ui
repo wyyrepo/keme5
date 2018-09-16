@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>concilia</class>
+ <widget class="QDialog" name="concilia">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>990</width>
+    <height>552</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Conciliación de cuentas</string>
+  </property>
+  <layout class="QVBoxLayout">
+   <item>
+    <widget class="QLabel" name="titulolabel">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cuenta y descripción</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Fecha inicial:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="inicialdateEdit"/>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Fecha final:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="finaldateEdit"/>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Contabilidad</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QTableWidget" name="contabtableWidget">
+         <property name="columnCount">
+          <number>12</number>
+         </property>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QCheckBox" name="noconcicheckBox">
+           <property name="text">
+            <string>Sólo no conciliadas</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QPushButton" name="conciliapushButton">
+             <property name="text">
+              <string>&amp;Concilia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/check2.png</normaloff>:/iconos/graf/check2.png</iconset>
+             </property>
+             <property name="default">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="borrapushButton">
+             <property name="text">
+              <string>&amp;Borrar</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/borrar.png</normaloff>:/iconos/graf/borrar.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="fechapushButton">
+             <property name="text">
+              <string>&amp;Fecha</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/calendario_venci.png</normaloff>:/iconos/graf/calendario_venci.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="consultapushButton">
+             <property name="text">
+              <string>C&amp;onsulta</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/xmag.png</normaloff>:/iconos/graf/xmag.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="nuevopushButton">
+             <property name="text">
+              <string>&amp;Nuevo</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/Files-New-File-icon.png</normaloff>:/iconos/graf/Files-New-File-icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="vencipushButton">
+             <property name="text">
+              <string>&amp;Vencimientos</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/COINS-icon.png</normaloff>:/iconos/graf/COINS-icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="editapushButton">
+             <property name="text">
+              <string>&amp;Editar</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/boligrafo_editar.png</normaloff>:/iconos/graf/boligrafo_editar.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="imprimecontpushButton">
+             <property name="text">
+              <string>&amp;Imprimir</string>
+             </property>
+             <property name="icon">
+              <iconset resource="keme.qrc">
+               <normaloff>:/iconos/graf/printer.png</normaloff>:/iconos/graf/printer.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Cuenta externa</string>
+      </attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QTableWidget" name="externatableWidget">
+         <property name="columnCount">
+          <number>10</number>
+         </property>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QCheckBox" name="noconciextcheckBox">
+           <property name="text">
+            <string>Sólo partidas no conciliadas</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>21</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QLabel" name="margenlabel">
+             <property name="text">
+              <string>Margen fechas (días)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="margenspinBox">
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="conciliaextpushButton">
+           <property name="text">
+            <string>&amp;Concilia línea</string>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="adpartidapushButton">
+           <property name="text">
+            <string>&amp;Añadir línea</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="editalineapushButton">
+           <property name="text">
+            <string>&amp;Editar línea</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="borrarpushButton">
+           <property name="text">
+            <string>&amp;Borrar línea</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="imprimeexpushButton">
+           <property name="text">
+            <string>&amp;Imprime</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <spacer>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>261</width>
+         <height>25</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="refrescarpushButton">
+       <property name="text">
+        <string>&amp;Refrescar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="eliminapushButton">
+       <property name="text">
+        <string>&amp;Elimina marcas</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="automatpushButton">
+       <property name="text">
+        <string>C&amp;onciliación automática</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="imprimeinfpushButton">
+       <property name="text">
+        <string>Imprime &amp;Informe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="consultainfpushButton">
+       <property name="text">
+        <string>Co&amp;nsulta Informe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="latexpushButton">
+       <property name="text">
+        <string>Editar &amp;Latex</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelarpushButton">
+       <property name="text">
+        <string>&amp;Cancelar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="aceptarpushButton">
+       <property name="text">
+        <string>&amp;Aceptar</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>inicialdateEdit</tabstop>
+  <tabstop>finaldateEdit</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>contabtableWidget</tabstop>
+  <tabstop>noconcicheckBox</tabstop>
+  <tabstop>conciliapushButton</tabstop>
+  <tabstop>borrapushButton</tabstop>
+  <tabstop>fechapushButton</tabstop>
+  <tabstop>consultapushButton</tabstop>
+  <tabstop>nuevopushButton</tabstop>
+  <tabstop>vencipushButton</tabstop>
+  <tabstop>editapushButton</tabstop>
+  <tabstop>imprimecontpushButton</tabstop>
+  <tabstop>externatableWidget</tabstop>
+  <tabstop>noconciextcheckBox</tabstop>
+  <tabstop>margenspinBox</tabstop>
+  <tabstop>conciliaextpushButton</tabstop>
+  <tabstop>adpartidapushButton</tabstop>
+  <tabstop>editalineapushButton</tabstop>
+  <tabstop>borrarpushButton</tabstop>
+  <tabstop>imprimeexpushButton</tabstop>
+  <tabstop>refrescarpushButton</tabstop>
+  <tabstop>eliminapushButton</tabstop>
+  <tabstop>automatpushButton</tabstop>
+  <tabstop>imprimeinfpushButton</tabstop>
+  <tabstop>consultainfpushButton</tabstop>
+  <tabstop>latexpushButton</tabstop>
+  <tabstop>cancelarpushButton</tabstop>
+  <tabstop>aceptarpushButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="keme.qrc"/>
+ </resources>
+ <connections/>
+</ui>
